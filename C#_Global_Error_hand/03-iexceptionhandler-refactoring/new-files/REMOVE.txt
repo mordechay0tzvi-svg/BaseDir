@@ -1,0 +1,14 @@
+# קבצים ותיקיות למחיקה
+
+בשלב זה, מחק את הקבצים והתיקיות הבאים:
+
+## תיקיות למחיקה:
+
+1. `Middleware/` - כולל כל הקבצים בתוכה
+   - `Middleware/ExceptionHandlingMiddleware.cs`
+
+## הסבר:
+
+אנחנו עוברים מ-Custom Middleware ל-IExceptionHandler, לכן אנחנו לא צריכים יותר את תיקיית Middleware.
+
+ה-IExceptionHandler יטפל בחריגות לא צפויות (500 errors), בעוד שה-Controllers ימשיכו להחזיר תוצאות HTTP רגילות (404, 400) למצבים צפויים.
